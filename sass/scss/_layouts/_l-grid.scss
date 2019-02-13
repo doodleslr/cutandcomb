@@ -1,0 +1,127 @@
+@import "_modules/_bits";
+
+.splitscreen {
+    float: left;
+    width: 50%;
+    margin: 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    @include box-shadow;
+    @include XL {
+        width: 50%;
+        height: 400px;
+    }
+    @include LG {
+        width: 50%;
+        height: 400px;
+    }
+    @include MD {
+        width: 100%;
+        height: 350px;
+    }
+    @include SM {
+        width: 100%;
+        height: 350px;
+    }
+    @include XS {
+        width: 100%;
+        height: 300px;
+    }
+}
+.split-left-creator {
+    @include XL {
+        background-image: url(../../images/people/cg1.jpg);
+    }
+    @include LG {
+        background-image: url(../../images/people/cg1.jpg);
+    }
+}
+.split-left-prod {
+    background-image: url(../../images/BCM/productSplit.png);
+    background-size: 100%;
+    @include box-none;
+}
+.splitText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 50%;
+    background-color: $beige;
+    z-index: 999;
+    padding: 15px 15px;
+    text-align: center;
+    @include XL {
+        width: 90%;
+        height: 75%;
+    }
+    @include LG {
+        width: 90%;
+        height: 75%;
+    }
+    @include MD {
+        width: 80%;
+        height: 75%;
+    }
+    @include SM {
+        width: 80%;
+        height: 75%;
+    }
+    @include XS {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+.abtUs {
+    text-align: right;
+    @include XL {
+        padding: 0px 10px;
+    }
+    @include LG {
+        padding: 20px 10px 0px 10px;
+    }
+    @include MD {
+        padding: 20px 10px 0px 10px;
+    }
+    @include SM {
+        padding: 20px 10px 0px 10px;
+    }
+    @include XS {
+        padding: 20px 10px 0px 10px;
+    }
+}
+.abtSplit {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    @include XL {
+        width: 30%;
+        height: auto;
+        margin: 0 20px;
+    }
+    @include LG {
+        width: 40%;
+        height: auto;
+        margin: 20px;
+    }
+    @include MD {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    @include SM {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    @include XS {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+}

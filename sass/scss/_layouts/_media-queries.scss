@@ -1,0 +1,108 @@
+@import "_modules/_bits";
+
+@mixin XL {
+  @media #{$xtra-large} {
+    @content;
+  }
+}
+@mixin LG {
+  @media #{$large} {
+    @content;
+  }
+}
+@mixin MD {
+  @media #{$medium} {
+    @content;
+  }
+}
+@mixin SM {
+  @media #{$small} {
+    @content;
+  }
+}
+@mixin XS {
+  @media #{$xtra-small} {
+    @content;
+  }
+}
+.hide-me {
+	@include XL {
+		display: inline;
+	}
+	@include LG {
+		display: inline;
+	}
+	@include MD {
+		display: none;
+	}
+	@include SM {
+		display: none;
+	}
+	@include XS {
+		display: none;
+	}
+}
+.hide-me-alt {
+	color: $purple !important;
+	@include XL {
+		text-align: center;
+	}
+	@include LG {
+		text-align: center;
+	}
+	@include MD {
+		visibility: visible;
+	}
+	@include SM {
+		visibility: hidden;
+	}
+	@include XS {
+		visibility: hidden;
+	}
+}
+.home-styler {
+	@include XL {
+		padding-bottom: 50px;
+		margin-bottom: -65px;
+		min-height: 250px;
+	}
+	@include LG {
+		padding-bottom: 50px;
+		margin-bottom: -65px;
+		min-height: 100px;
+	}
+	@include MD {
+		padding-bottom: 50px;
+		margin-bottom: -65px;
+		min-height: 100px;
+	}
+	@include SM {
+		padding-bottom: 45px;
+		margin-bottom: -50px;
+		min-height: 100px;
+	}
+	@include XS {
+		padding-bottom: 40px;
+		margin-bottom: -30px;
+		min-height: 100px;
+	}
+}
+#map {
+	width: 100%;
+	margin-top: 10px;
+	@include XL {
+		height: 300px;
+	}
+	@include LG {
+		height: 250px;
+	}
+	@include MD {
+		height: 200px;
+	}
+	@include SM {
+		height: 225px;
+	}
+	@include XS {
+		height: 225px;
+	}
+}

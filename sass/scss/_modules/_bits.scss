@@ -1,0 +1,47 @@
+//text colours
+$beige: #f3eded;
+$lightpurple: #a19196;
+$purple: #4e4246;
+$transPurple: rgba(78, 66, 70, 0.9);
+$brown: #a99a8b;
+$red: #aa3c5d;
+
+//media queries
+$xtra-large:"screen and (min-width: 992px)";
+$large:"(min-width: 768px) and (max-width: 991px)";
+$medium:"(min-width: 600px) and (max-width: 767px)";
+$small:"(min-width: 480px) and (max-width: 599px)";
+$xtra-small:"only screen and (max-width: 479px)";
+
+@mixin inCarousel {
+	&:before, &:after {
+		font-family: 'Lato', sans-serif;
+		font-size: 75px;
+		color: $purple;
+		font-style: italic;
+		font-weight: normal;
+		height: 50px;
+		position: absolute;
+		clear: both;
+	}
+}
+
+@mixin ico {
+	font-family: 'icomoon';
+	font-size: 70px;
+}
+@mixin box-none {
+	-webkit-box-shadow: 0px 0px 0px !important;
+  	-moz-box-shadow:    0px 0px 0px !important;
+ 	box-shadow:         0px 0px 0px !important;
+}
+@mixin box-shadow {
+	-webkit-box-shadow: 0px 2px 4px -1px $transPurple;
+  	-moz-box-shadow:    0px 2px 4px -1px $transPurple;
+ 	box-shadow:         0px 2px 4px -1px $transPurple;
+}
+@mixin inset {
+	-webkit-box-shadow: inset 0px 1px 4px $transPurple;
+  	-moz-box-shadow:    inset 0px 1px 4px $transPurple;
+ 	box-shadow:         inset 0px 1px 4px $transPurple;
+}

@@ -1,0 +1,106 @@
+@import "_modules/_bits";
+
+.home-styler {
+	background-color: $brown;
+}
+.imgSplash {
+	width: 100%;
+	height: auto;
+	max-height: 700px;
+	margin: 0px auto;
+}
+.img-container {
+	width: 100%;
+	height: auto;
+	max-height: 700px;
+	background-color: $beige;
+}
+.header-img {
+	max-height: 700px;
+	display: block;
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+.logo-pos {
+	float: right !important;
+	padding: 5px 10px;
+}
+.logoWrap {
+	background-color: $transPurple;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px $purple;
+	float: right;
+}
+.prodLink {
+	text-decoration: none !important;
+	font-style: italic;
+}
+body {
+	color: $purple !important;
+	background-color: $beige !important;
+	background-image: url("../../images/bodyBG.jpg");
+	background-attachment: fixed;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hrBoth:before, .hrBoth:after {
+  	content: '';
+  	display: block;
+  	height: 1px;
+  	margin: 10px 0px 10px 0px;
+  	background: $purple;
+  	background: -webkit-gradient(linear, 0 0, 100% 0, from($beige), to($beige), color-stop(50%, $purple));
+}
+
+.hr {
+  	display: inline-block;
+  	padding-bottom: 15px;
+  	:after {
+	  	content: '';
+	  	display: block;
+	  	height: 1px;
+	  	margin-top: 10px;
+	  	background: $purple;
+	  	background: -webkit-gradient(linear, 0 0, 100% 0, from($beige), to($beige), color-stop(50%, $purple));
+  	}
+}
+.hrFoot {
+	display: inline-block;
+	padding-bottom: 15px;
+	:after {
+	  	content: '';
+	 	display: block;
+	 	height: 1px;
+		margin-top: 10px;
+		background: $purple;
+		background: -webkit-gradient(linear, 0 0, 100% 0, from($brown), to($brown), color-stop(50%, $purple));
+	}
+}
+
+footer {
+	padding: 0px 5% 0px 5%;
+	margin: 0 auto;
+	background-color: #a99a8b;
+	text-align: center;
+	div {
+		padding-top: 10px;
+	}
+
+}
+.footerBar {
+	width: 100%;
+	background-color: $purple;
+	color: $beige;
+	text-align: center;
+	margin: 0;
+}
+
+.box-shadow{
+	@include box-shadow;
+}
+.inset {
+	@include inset;
+}

@@ -1,0 +1,226 @@
+@import "_modules/_bits";
+
+#hide-logo {
+	position: absolute;
+	height: auto;
+	transform: translateX(-50%);
+	left: 49%;
+	max-width: 400px;
+	@include XL {
+		top: 35%;
+		width: 24%;
+	}
+	@include LG {
+		top: 50%;
+		width: 24%;
+	}
+}
+#hide-logo-alt {
+	position: absolute;
+	top: 10%;
+	@include MD {
+		height: 70%;
+	}
+	@include SM {
+		height: 70%;
+	}
+	@include XS {
+		height: 50%;
+	}
+}
+.navbar-header {
+	position: relative;
+	@include XL {
+		display: none;
+	}
+	@include LG {
+		display: none;
+	}
+	@include MD {
+		width: 50%;
+		height: inherit;
+		padding-left: 10px;
+		margin: 0 auto;
+		float: none !important;
+	}
+	@include SM {
+		width: 60%;
+		height: inherit;
+		padding-left: 10px;
+	}
+	@include XS {
+		width: 75%;
+		height: inherit;
+		padding-left: 10px;
+		top: 20%;
+	}
+}
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 5px;
+    background-color: $purple;
+    margin: 4px;
+    transition: 0.4s;
+}
+.menuClick {
+	.bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    	transform: rotate(-45deg) translate(-9px, 6px);
+	}
+	.bar2 {
+		opacity: 0;
+	}
+	.bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px -8px);
+    	transform: rotate(45deg) translate(-8px -8px);
+	}
+}
+.nav {
+	li {
+		background-color: $beige;
+		z-index: 1;
+		@include XL {
+			padding: 5px;
+			height: 63px;
+		}
+		@include LG {
+			padding: 0px;
+			height: 50px;
+		}
+		a {
+			color: $purple !important;
+			font-family: 'Playfair Display SC', serif;
+			text-align: center;
+			@include XL {
+				font-size: 17px;
+			}
+			@include LG {
+				font-size: 16px;
+			}
+			@include MD {
+				font-size: 17px;
+			}
+			@include SM {
+				font-size: 16px;
+			}
+			@include XS {
+				font-size: 15px;
+			}
+			&:hover {
+				color: $red !important;
+				font-weight: 600;
+				transform: translateY(-2px);
+				-webkit-transition: color 1s, transform .5s;
+	    		transition: color 1s, transform .5s;
+			}
+		}
+	}
+}
+#selected {
+	color: $red !important;
+	font-weight: 600;
+	transform: translateY(-2px);
+}
+#current {
+	border-bottom: 6px solid $red;
+	box-sizing: border-box;
+}
+#mobile-current{
+	border-bottom: 4px solid $red;
+}
+#main-menu-hide {
+	height: inherit;
+	@include XL {
+		display: block;
+	}
+	@include LG {
+		display: block;
+	}
+	@include MD {
+		display: none;
+	}
+	@include SM {
+		display: none;
+	}
+	@include XS {
+		display: none;
+	}
+	ul { 
+		transform: translateY(98%);
+		li:nth-child(2):before,  {	
+			right: 0;
+			border-right: 1px solid $purple;
+		}
+		li:nth-child(2):after {	
+			left: 0;
+			border-left: 1px solid $purple;
+		}
+		li:nth-child(2):before, :after {
+			content:"";
+			position: absolute;
+			top: 25%;
+			height: 50%;
+		}
+	}
+}
+
+#menu {
+	float: right;
+	color: $purple !important;
+	width: 35px;
+	height: 35px;
+	padding: 0;
+	overflow: hidden;
+	border-style: none;
+	@include MD {
+		transform: translateY(80%);
+		margin-right: 45px;
+	}
+	@include SM {
+		transform: translateY(50%);
+		margin-right: 15px;
+	}
+	@include XS {
+		transform: translateY(50%);
+		margin-right: 10px;
+	}
+}
+.navbar-default {
+	background-color: $beige !important;
+}
+.navbar {
+	border-style: none;
+	padding: 0px;
+	@include XL {
+		height: 126px;
+	}
+	@include LG {
+		height: 100px;
+	}
+	@include MD {
+		height: 100px;
+	}
+	@include SM {
+		height: 75px;
+	}
+	@include XS {
+		height: 75px;
+	}
+}
+.navbar-collapse {
+	max-height: none !important;
+}
+.navbar-nav {
+	margin: 0px -15px !important;
+}
+#nav-align-R {
+	float: right !important;
+}
+#min-menu-collapsed {
+	@include XL {
+		display: none !important;
+	}
+	@include LG {
+		display: none !important;
+	}
+}
